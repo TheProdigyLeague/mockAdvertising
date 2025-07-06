@@ -1,0 +1,513 @@
+/* General Body & IE Frame */
+body {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif; /* System-like fonts */
+    margin: 0;
+    padding: 20px; /* Padding for the entire IE window on the screen */
+    background-color: #E0E0E0; /* Light gray background for the desktop */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top of screen */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.ie-frame {
+    background-color: #ECE9D8; /* IE-like window background */
+    border: 1px solid #999;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    border-radius: 6px; /* Slight rounded corners */
+    width: 1000px; /* Fixed width for the whole application */
+    max-width: 95vw; /* Responsive on smaller screens */
+    overflow: hidden; /* Contains children */
+    display: flex;
+    flex-direction: column;
+}
+
+/* IE Browser Top Bar Styling */
+.ie-toolbar-top {
+    background-color: #E0E0E0;
+    border-bottom: 1px solid #BBB;
+    padding-bottom: 5px; /* Space for the bottom border of the address bar */
+}
+
+.ie-title-bar {
+    background: linear-gradient(to right, #000080, #0040C0); /* Classic blue gradient */
+    color: white;
+    padding: 3px 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: default; /* Not actually draggable, but for looks */
+}
+
+.ie-title-bar .ie-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #0099FF; /* Placeholder for IE icon */
+    border: 1px solid white;
+    margin-right: 5px;
+}
+
+.ie-title-bar .ie-controls {
+    margin-left: auto;
+    display: flex;
+}
+
+.ie-control-btn {
+    width: 20px;
+    height: 18px;
+    margin-left: 2px;
+    background-color: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFF #666 #666 #FFF; /* Beveled effect */
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ie-control-btn.close {
+    background-color: #FF6666;
+    color: white;
+    border-color: #FF9999 #CC3333 #CC3333 #FF9999;
+}
+
+.ie-control-btn:active {
+    border-color: #666 #FFF #FFF #666; /* Pressed effect */
+}
+
+
+.ie-address-bar {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #E0E0E0;
+    border-top: 1px solid #CCC;
+}
+
+.ie-address-bar label {
+    font-size: 0.85em;
+    margin-right: 5px;
+}
+
+.ie-address-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 2px 5px;
+    border: 1px solid #7F9DB9; /* IE-like border */
+    background-color: white;
+    font-size: 0.85em;
+    margin-right: 5px;
+}
+
+.ie-go-btn {
+    padding: 2px 10px;
+    background-color: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFF #666 #666 #FFF;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+.ie-go-btn:active {
+    border-color: #666 #FFF #FFF #666; /* Pressed effect */
+}
+
+/* Top Bar (MyBook Specific) */
+.top-bar {
+    background-color: #F0F0F0; /* Light gray */
+    border-bottom: 1px solid #CCC;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #3366CC; /* Facebook blue */
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.7); /* Subtle white shadow */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85em;
+    transition: color 0.2s;
+    padding: 5px;
+    border: 1px solid transparent; /* For hover effect */
+}
+
+.nav-item:hover {
+    color: #000;
+    border-color: #BBB;
+    background-color: #EAEAEA;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+    color: #3366CC; /* Icon color */
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #FF0000; /* Red highlight */
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #FF9999;
+}
+
+/* Main Content Area */
+.content-area {
+    display: flex;
+    padding: 15px;
+    gap: 15px; /* Space between columns */
+    flex-grow: 1; /* Make content area fill remaining space */
+}
+
+/* Sidebar Styling (Left & Right) */
+.left-sidebar, .right-sidebar {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
+}
+
+.left-sidebar {
+    flex: 0 0 220px; /* Fixed width for left sidebar */
+}
+
+.right-sidebar {
+    flex: 0 0 200px; /* Fixed width for right sidebar */
+}
+
+.left-sidebar h3, .right-sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1em;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 5px;
+}
+
+/* Profile Summary */
+.profile-summary {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-summary .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #3366CC;
+    margin-bottom: 5px;
+}
+.profile-summary p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.status-btn {
+    background-color: #E0E0E0;
+    border: 1px solid;
+    border-color: #FFF #999 #999 #FFF; /* Beveled button */
+    padding: 5px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.status-btn:active {
+    border-color: #999 #FFF #FFF #999;
+}
+
+/* Friends List & Suggestions List */
+.friends-list, .suggestions-list, .quick-links, .events-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.friends-list li, .suggestions-list li {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #333;
+}
+.friend-avatar, .suggestion-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid #CCC;
+}
+.add-friend-btn {
+    background-color: #C0C0C0;
+    border: 1px solid;
+    border-color: #FFF #999 #999 #FFF;
+    padding: 2px 8px;
+    font-size: 0.75em;
+    cursor: pointer;
+    margin-left: auto; /* Push to right */
+}
+.add-friend-btn:active {
+    border-color: #999 #FFF #FFF #999;
+}
+
+/* Quick Links & Events List */
+.quick-links li a, .events-list li a {
+    text-decoration: none;
+    color: #3366CC;
+    font-size: 0.9em;
+    padding: 3px 0;
+    display: block;
+}
+.quick-links li a:hover, .events-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Dashboard Styling */
+.main-dashboard {
+    flex-grow: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dashboard-section {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.dashboard-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2em;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 5px;
+}
+
+/* Sponsored Content */
+.sponsored-ad {
+    border: 1px solid #EEE;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #F9F9F9;
+    text-align: center;
+}
+.sponsored-ad img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #CCC;
+}
+.sponsored-ad p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+.action-btn {
+    background-color: #E0E0E0;
+    border: 1px solid;
+    border-color: #FFF #999 #999 #FFF;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    font-weight: bold;
+}
+.action-btn:active {
+    border-color: #999 #FFF #FFF #999;
+}
+
+/* Friends' Posts / Feed */
+.new-post-box {
+    background-color: #F0F0F0;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.new-post-box textarea {
+    width: calc(100% - 10px);
+    height: 60px;
+    border: 1px solid #7F9DB9;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 0.9em;
+    resize: vertical;
+}
+.post-btn {
+    background-color: #5C88D4; /* A slightly different blue for buttons */
+    color: white;
+    border: 1px solid;
+    border-color: #99BBFF #3366CC #3366CC #99BBFF;
+    padding: 8px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    align-self: flex-end; /* Push to bottom right */
+    border-radius: 3px;
+}
+.post-btn:active {
+    border-color: #3366CC #99BBFF #99BBFF #3366CC;
+}
+
+
+.post {
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #CCC;
+}
+.post-info {
+    font-size: 0.9em;
+}
+.post-info strong {
+    color: #3366CC;
+}
+.post-info .timestamp {
+    color: #888;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+.post-content {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+}
+.post-actions {
+    border-top: 1px solid #EEE;
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.post-action-btn {
+    background-color: #F0F0F0;
+    border: 1px solid;
+    border-color: #FFF #CCC #CCC #FFF;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.post-action-btn:active {
+    border-color: #CCC #FFF #FFF #CCC;
+}
+
+
+/* IE Status Bar */
+.ie-status-bar {
+    background-color: #E0E0E0;
+    border-top: 1px solid #BBB;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    color: #333;
+}
+
+.ie-status-bar span {
+    margin-right: 15px;
+}
+
+.ie-progress-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #CCC;
+    border: 1px inset #999;
+    margin: 0 10px;
+    /* You could add a loading animation with JS/CSS if desired */
+}
+
+.ie-security-zone {
+    margin-left: auto; /* Push to right */
+    border-left: 1px solid #BBB;
+    padding-left: 10px;
+}
+
+/* Basic Responsiveness - not full IE-era, but practical */
+@media (max-width: 800px) {
+    .content-area {
+        flex-direction: column;
+    }
+    .left-sidebar, .right-sidebar {
+        flex: 1 1 auto; /* Allow sidebars to grow and stack */
+        width: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ie-frame {
+        border-radius: 0;
+    }
+    body {
+        padding: 0;
+    }
+}
