@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBook - Welcome!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ie-frame">
+    <div class="ie-toolbar-top">
+        <div class="ie-title-bar">
+            <span class="ie-icon"></span>
+            <span class="ie-title">MyBook - Microsoft Internet Explorer</span>
+            <div class="ie-controls">
+                <button class="ie-control-btn minimise"></button>
+                <button class="ie-control-btn maximize"></button>
+                <button class="ie-control-btn close">X</button>
+            </div>
+        </div>
+        <div class="ie-address-bar">
+            <label for="address">Address</label>
+            <input type="text" id="address" value="http://www.mybook.com/home.html" readonly>
+            <button class="ie-go-btn">Go</button>
+        </div>
+    </div>
+
+    <header class="top-bar">
+        <div class="logo">MyBook</div>
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="#" class="nav-item" id="profile-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.2 0-4.2-1.19-5.4-3.05 1.42-1.12 3.25-1.9 5.4-1.9s3.98.78 5.4 1.9c-1.2 1.86-3.2 3.05-5.4 3.05z"/>
+                        </svg>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" id="notifications-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.93 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                        </svg>
+                        <span>Notifications</span>
+                        <span class="notification-badge">99+</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" id="feed-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6v-3h12v3zM18 8H6V6h12v2zm0 5H6v-2h12v2z"/>
+                        </svg>
+                        <span>Live Feed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" id="messages-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                        </svg>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" id="settings-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.75-1.72-1.0V4.01c0-.28-.22-.5-.5-.5h-4c-.28 0-.5.22-.5.5v2.01c-.63.25-1.2-.6-1.72-1.0L4.2 2.73c-.22-.08-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.75 1.72 1.0V19.99c0 .28.22.5.5.5h4c.28 0 .5-.22.5-.5v-2.01c.63-.25 1.2-.6 1.72-1.0l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                        </svg>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-area">
+        <aside class="left-sidebar">
+            <h3>My Info</h3>
+            <div class="profile-summary">
+                <img src="imgs/pfp.jpg" alt="Your Profile Picture" class="profile-pic">
+                <p><strong>John Doe</strong></p>
+                <p>Online now</p>
+                <button class="status-btn">Update Status</button>
+            </div>
+
+            <h3>Friends Online</h3>
+            <ul class="friends-list">
+                <li><img src="imgs/friend1.jpg" alt="Friend 1" class="friend-avatar"> Friend One</li>
+                <li><img src="imgs/friend2.jpg" alt="Friend 2" class="friend-avatar"> Friend Two</li>
+                <li><img src="imgs/friend3.jpg" alt="Friend 3" class="friend-avatar"> Friend Three</li>
+                <li><img src="imgs/friend4.jpg" alt="Friend 4" class="friend-avatar"> Friend Four</li>
+            </ul>
+
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Videos</a></li>
+            </ul>
+        </aside>
+
+        <section class="main-dashboard">
+            <div class="dashboard-section">
+                <h2>Sponsored Content</h2>
+                <div class="sponsored-ad">
+                    <img src="imgs/corporate.jpg" alt="Sponsored Ad">
+                    <p>Discover our amazing new product! Click here to learn more about how it can change your life.</p>
+                    <button class="action-btn">Learn More</button>
+                </div>
+                <div class="sponsored-ad">
+                    <img src="imgs/promo.jpg" alt="Service Promotion">
+                    <p>Need a service? We've got you covered! Professional, reliable, and affordable.</p>
+                    <button class="action-btn">Get a Quote</button>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>Friends' Posts</h2>
+                <div class="new-post-box">
+                    <textarea placeholder="What's on your mind, John?"></textarea>
+                    <button class="post-btn">Post Update</button>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="imgs/friend1.jpg" alt="Friend 1" class="post-avatar">
+                        <div class="post-info">
+                            <strong>Friend One</strong> <span class="timestamp">1 hour ago</span>
+                        </div>
+                    </div>
+                    <p class="post-content">Just enjoyed a fantastic cup of coffee! #coffeelover #morningvibes</p>
+                    <div class="post-actions">
+                        <button class="post-action-btn">Like</button>
+                        <button class="post-action-btn">Comment</button>
+                        <button class="post-action-btn">Share</button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="imgs/friend2.jpg" alt="Friend 2" class="post-avatar">
+                        <div class="post-info">
+                            <strong>Friend Two</strong> <span class="timestamp">3 hours ago</span>
+                        </div>
+                    </div>
+                    <p class="post-content">Finished a great workout today! Feeling energized. 💪</p>
+                    <img src="imgs/friend2pic.png" alt="Workout Image" class="post-image">
+                    <div class="post-actions">
+                        <button class="post-action-btn">Like</button>
+                        <button class="post-action-btn">Comment</button>
+                        <button class="post-action-btn">Share</button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="imgs/friend3.jpg" alt="Friend 3" class="post-avatar">
+                        <div class="post-info">
+                            <strong>Friend Three</strong> <span class="timestamp">Yesterday</span>
+                        </div>
+                    </div>
+                    <p class="post-content">Reading a fascinating book about ancient history. Highly recommend!</p>
+                    <div class="post-actions">
+                        <button class="post-action-btn">Like</button>
+                        <button class="post-action-btn">Comment</button>
+                        <button class="post-action-btn">Share</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <h3>People You May Know</h3>
+            <ul class="suggestions-list">
+                <li>
+                    <img src="imgs/person1.jpg" alt="Person 1" class="suggestion-avatar">
+                    Person One
+                    <button class="add-friend-btn">Add Friend</button>
+                </li>
+                <li>
+                    <img src="imgs/person2.jpg" alt="Person 2" class="suggestion-avatar">
+                    Person Two
+                    <button class="add-friend-btn">Add Friend</button>
+                </li>
+                <li>
+                    <img src="imgs/person3.jpg" alt="Person 3" class="suggestion-avatar">
+                    Person Three
+                    <button class="add-friend-btn">Add Friend</button>
+                </li>
+            </ul>
+
+            <h3>Upcoming Events</h3>
+            <ul class="events-list">
+                <li><a href="#">Annual Tech Meetup (July 15)</a></li>
+                <li><a href="#">Local Market Fair (July 20)</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <div class="ie-status-bar">
+        <span>Done</span>
+        <div class="ie-progress-bar"></div>
+        <span class="ie-security-zone">Internet | Protected Mode: Off</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
